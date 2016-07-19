@@ -63,5 +63,4 @@ end
   gem 'font-awesome-sass'
   #soccial
   gem 'social-share-button', '0.2.1'
-end
 
