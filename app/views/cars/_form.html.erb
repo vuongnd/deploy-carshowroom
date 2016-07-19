@@ -1,0 +1,69 @@
+<%= form_for @car, html: { multipart: true } do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% @car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.date_select :year, start_year: 1980, use_day_numbers: true %>
+  </div>
+  <div class="field">
+    <%= f.label :madein %><br>
+    <%= f.text_field :madein %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :max_speed %><br>
+    <%= f.number_field :max_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :fuel_consumption %><br>
+    <%= f.text_field :fuel_consumption %>
+  </div>
+  <div class="field">
+    <%= f.label :engine_capacity %><br>
+    <%= f.text_field :engine_capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :acceleration %><br>
+    <%= f.text_field :acceleration %>
+  </div>
+  <div class="field">
+    <%= f.label :wheel_size %><br>
+    <%= f.text_field :wheel_size %>
+  </div>
+  <div class="field">
+    <%= f.label :braking_system %><br>
+    <%= f.text_field :braking_system %>
+  </div>
+  <div class="field">
+    <%= f.label :safety_system %><br>
+    <%= f.text_field :safety_system %>
+  </div>
+  <div class="field">
+    <%= f.label :typeofcar_id %><br>
+    <%= f.collection_select :typeofcar_id, Typeofcar.all, :id, :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

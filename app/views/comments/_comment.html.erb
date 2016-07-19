@@ -1,0 +1,14 @@
+<%= div_for comment do %>
+	<h3>
+		<%= comment.name %>
+		<% if current_user.blank? == false %>
+			<% if current_user.admin == true %>
+				<span class='actions'>
+				<%= link_to 'Delete', event_comment_path(:event_id => @event,
+				:id => comment), confirm: 'Are you sure?', method: :delete %>
+				</span>
+			<% end %>
+		<% end %>
+	</h3>
+		<%= comment.body %>
+<% end %>

@@ -1,0 +1,279 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body{
+	margin: 0;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: font-url("coarserounded.ttf");
+}
+@font-face {
+    font-family: mySecondFont;
+    src: font-url("abc.ttf");
+}
+@font-face {
+    font-family: logo;
+    src: font-url("logo.otf");
+}
+img{
+	width: 100%;
+}
+
+/*menu home page*/
+
+#menu-home{
+	margin:0 auto;
+}
+#menu-home ul {
+	position: relative;
+	margin: 0;
+	margin-top:20px;
+}
+
+#menu-home ul li {
+	position: relative;
+	float: left;
+	list-style: none;
+}
+#menu-home ul li a{
+	margin:0; 
+	padding: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	line-height: 50px;
+	font-size: 25px;
+	color: white;
+	font-family: myFirstFont;
+  	transition: 1s;
+  	text-decoration: none;
+  	outline-style: none;
+
+}
+#menu-home ul li a:hover {
+	transition: 0.3s;
+  	border-top: 4px solid #ffffff;
+  	border-bottom: 4px solid #ffffff;
+  	padding-bottom: 6px;
+  	padding-top: 6px;
+}
+
+/* end menu*/
+
+/*content home page*/
+.bgcolor{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: -2;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,1);
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(54%, rgba(0,0,0,1)), color-stop(59%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 54%, rgba(255,255,255,1) 59%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+}
+.content{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+
+	z-index: -1;
+	background-image: image-url('bghome.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.content .event{
+	width: 450px;
+	height: 200px;
+	bottom: 10px;
+	left: 10px;
+	position: absolute;
+}
+.content .event a {
+	font-family: mySecondFont;
+	font-size: 50px;
+	position: absolute;
+	transition: 1s;
+	left: 5px;
+	color: black;
+}
+.content .event img {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: -2;
+	width: 450px;
+	height: 200px;
+}
+.content .viewcar{
+	max-width: 250px;
+	max-height: 80px;
+	background-color: red;
+	bottom: 20px;
+	right: 20px;
+	position: absolute;
+	transition: 1s;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	background-color: white;
+	-webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    background: #e1e1e1;
+}
+
+.content .viewcar:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2098d1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.content .viewcar:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.content .viewcar img{
+	max-width: 100px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+.content .viewcar{
+
+}
+/*end content*/
+
+/*search home page*/
+.search-home{
+	position:fixed;
+	top: 25%;
+	left: 50%;
+	width: 800px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: -25px;
+	margin-left: -400px;  
+	transition: 1s;
+
+}
+.search-home form {
+	height: 35px;
+
+}
+.search-home form input{
+	padding: 0px 0px 0px 15px;
+	border: 1px dotted;
+	border-radius: 3px;
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	color: black;
+	font-weight: 600;
+	background-color: white;
+}
+
+
+/*logo company*/
+
+.logocompany{
+	max-width: 400px;
+	max-height: 60px;
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+}
+.logocompany a{
+	font-size: 50px;
+	color: black;
+	font-family: logo;
+}
+.logocompany a:hover{
+	background-color: white;	
+}
+
+/* home page */
+.menu-home-page{
+	width: 100%;
+	background-color:black;
+}
+.intro{
+	background-image: url('../system/localimage/bg/bgimg1.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	min-height: 900px;
+	padding-top: 80px;
+}
+.intro p{
+	color: white;
+}
+.intro .content_intro{
+	max-width: 400px;
+	margin-left: 10px;
+	padding: 20px;
+	background-color:rgba(0, 0, 0, 0.82);
+}
+
+.intro .content_intro p{
+	font-size: 18px;
+}
+.intro-next{
+	max-width: 30px;
+	margin: 0 auto;
+}
+
+
+.info .content-info{
+	margin-top: 15px;
+}
+.demo-products{
+	padding-right:0px;
+	animation-duration: 3s;
+}
+.demo-products>div{
+	border-radius: 0px;
+	border: 1px solid black;
+}
+.demo-products:last-child{
+	padding-right:15px;
+}
+
+.video-intro{
+	padding-top: 15px;
+}
+.video-intro > div:first-child{
+	
+
+}
+.video-intro > div:last-child{
+	/* background-color: saddlebrown; */
+	margin-top: -15px;
+	padding-top: 15px;
+}
+.video-intro img{
+	height: 500px;
+	margin-bottom: 15px;
+}
+.securities{
+	height: 500px;
+	background-color: black;
+}

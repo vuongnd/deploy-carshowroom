@@ -1,0 +1,27 @@
+<div class=" menu-home-page">
+<div class="container">
+	<nav id="menu-home" class="nav nav-bar menu-home-page">
+		<ul>
+			<li><a href="<%= homepage_path %>" title="" class="hvr-shutter-in-vertical">Home</a></li>
+			<li><a href="<%= events_path %>" title="">New Events</a></li>
+
+			<li><a href="<%= cars_path %>" title="">View Cars</a></li>
+			<li><a href="<%= faq_path %>" title="">FAQ</a></li>
+			<li><a href="<%= new_contact_path %>" title="">Contacts</a></li>
+			
+		</ul>
+	</nav>
+</div>
+</div>
+<div class="content">
+
+<div class="form-contact">
+	<h1>Contact to us</h1>
+	<%= render 'form' %>
+	<a class="back-contact" href="<%= url_for(:back) %>" title="">
+		<img src="/system/localimage/bg/back.png" alt="">
+	</a>
+</div>
+
+
+</div>

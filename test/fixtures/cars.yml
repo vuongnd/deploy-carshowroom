@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  year: 1
+  madein: MyString
+  color: MyString
+  max_speed: 1
+  fuel_consumption: MyString
+  engine_capacity: MyString
+  acceleration: MyString
+  wheel_size: MyString
+  braking_system: MyString
+  safety_system: MyString
+  typeofcar_id: 1
+
+two:
+  name: MyString
+  year: 1
+  madein: MyString
+  color: MyString
+  max_speed: 1
+  fuel_consumption: MyString
+  engine_capacity: MyString
+  acceleration: MyString
+  wheel_size: MyString
+  braking_system: MyString
+  safety_system: MyString
+  typeofcar_id: 1

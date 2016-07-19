@@ -1,0 +1,1 @@
+json.extract! @car, :id, :name, :year, :madein, :color, :max_speed, :fuel_consumption, :engine_capacity, :acceleration, :wheel_size, :braking_system, :safety_system, :typeofcar_id, :created_at, :updated_at

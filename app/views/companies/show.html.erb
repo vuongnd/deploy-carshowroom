@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<td><%= image_tag @company.logo.url(:thumb) %></td>
+<p>
+  <strong>Introduction:</strong>
+  <%= @company.introduction %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

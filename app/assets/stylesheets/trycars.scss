@@ -1,0 +1,21 @@
+// Place all the styles related to the Trycars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-trycar{
+	max-width: 250px;
+	margin: 0 auto;
+	background-color: floralwhite;
+	padding: 10px;
+	position: relative;
+	padding-top: 30px;
+}
+.back-contact{
+	width: 20px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display:block;
+}
+.back-contact img{
+	width: 20px;
+}

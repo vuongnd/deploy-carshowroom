@@ -1,0 +1,61 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "social-share-button";
+
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+.content-event{
+	max-height: 800px;
+	min-height: 800px;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: white;
+	overflow: scroll;
+}
+.footer{
+	margin-top: 0px;
+}
+.media img{
+	max-width: 250px;
+	max-height: 200px;
+	transition: 0.5s;
+}
+.media img:hover{
+	width: 230px;
+	border-radius: 0px;
+	transition: 1s;
+}
+.media:first-child{
+	padding-top: 10px;
+}
+/*.media:nth-of-type(even){
+	margin-left: 50px; 
+}*/
+.media a{
+	display: block;
+}
+
+.event-view{
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.hover-line{
+	width: 760px;
+	height: 4px;
+	background-color: dimgray;
+	margin-left: 15px;
+}

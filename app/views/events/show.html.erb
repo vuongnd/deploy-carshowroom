@@ -1,0 +1,43 @@
+<div class="menutop" id="top">
+    <nav>
+    </nav>
+    <a class="back" href="<%= events_path %>" title="">Back</a>
+    
+  </div>
+  <div class="notify">
+    <marquee><%= @eventlast.title %></marquee>
+  </div>
+<div class="event-view">
+	<p>
+	  <strong><%= @event.title %></strong>
+	</p>
+  <p>
+    <%= @event.description %>
+  </p>
+	<p>
+	  <%= image_tag @event.image.url() %>
+	</p>
+	<p>
+	  <%= @event.body %>
+	</p>
+    <strong>Sharing: </strong>
+    <%= social_share_button_tag(@event.title) %>
+  
+
+  <h3>Comments</h3>
+  <div id="comments">
+  <%= render @event.comments %>
+  </div>
+  <%= render :file => 'comments/new' %>
+    
+
+</div>
+
+  <div class="footer">
+    <div class="logocompanyindex">
+      <a>Thanh Cong Group</a>
+    </div>
+    <div class="backtotop">
+      <a href="#top" title=""><img src="/system/localimage/logo/backtotop.png" alt=""></a>
+    </div>
+  </div>

@@ -1,0 +1,46 @@
+<div class="menutop" id="top">
+    <nav id="" class=" nav nav-bar menu-home-page">
+      <ul>
+        <li><a href="<%= homepage_path %>" title="" class="hvr-shutter-in-vertical">Home</a></li>
+        <li><a href="<%= typeofcar_path(1) %>" title="">View Cars</a></li>
+        <li><a href="<%= faq_path %>" title="">FAQ</a></li>
+        <li><a href="<%= new_contact_path %>" title="">Contacts</a></li>
+        
+      </ul>
+    </nav>
+    <a class="back" href="<%= url_for(:back) %>" title="">Back</a>
+    
+  </div>
+  <div class="notify">
+    <marquee><%= @eventlast.title %></marquee>
+  </div>
+<!-- 
+  <%= link_to 'New Event', new_event_path %>
+ -->  
+<div class="content-event">
+  <% @events.each do |event| %>
+    <div class="media">
+      <div class="media-left media-middle col-md-4">
+        
+          <%= link_to (image_tag event.image.url(), :class => "media-object"), event %>
+        
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= event.title %></h4>
+        <%= event.description %>
+        <%= link_to 'view it', event %>
+      </div>
+    </div>
+    <div class="hover-line">
+      
+    </div>
+  <% end %>
+</div>
+  <div class="footer">
+    <div class="logocompanyindex">
+      <a>Thanh Cong Group</a>
+    </div>
+    <div class="backtotop">
+      <a href="#top" title=""><img src="/system/localimage/logo/backtotop.png" alt=""></a>
+    </div>
+  </div>

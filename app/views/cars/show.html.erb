@@ -1,0 +1,151 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @car.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @car.year %>
+</p>
+
+<p>
+  <strong>Madein:</strong>
+  <%= @car.madein %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @car.color %>
+    <div style="width: 50px; height: 20px; background-color: <%= @car.color %>;">
+    
+  </div>
+</p>
+-->
+
+  <div class="menutop" id="top">
+    <nav id="" class=" nav nav-bar menu-home-page">
+      <ul>
+        <li><a href="<%= homepage_path %>" title="" class="hvr-shutter-in-vertical">Home</a></li>
+        <li><a href="<%= typeofcar_path(1) %>" title="">View by Categories</a></li>
+        <li><a href="<%= events_path %>" title="">Events</a></li>
+        <li><a href="<%= faq_path %>" title="">FAQ</a></li>
+        <li><a href="<%= new_contact_path %>" title="">Contacts</a></li>
+        
+      </ul>
+    </nav>
+    <a class="back" href="<%= url_for(:back) %>" title="">Back</a>
+  </div>
+
+  <div class="notify">
+    <marquee><%= @eventlast.title %></marquee>
+  </div>
+
+  <div class="">
+  <nav class="menuindex">
+      <div class="categories">
+        <%= image_tag @car.typeofcar.company.logo.url(), :class => :logo, lazy: true  %>
+        <h3> About <%= @car.typeofcar.company.name %> Cars</h3>
+        <p>
+          <%= @car.typeofcar.company.introduction %>
+        </p>
+      </div>
+  </nav>
+
+
+  <div id="indexcar">
+    <div class="viewcar">
+
+          <div class="item active">
+            <%= image_tag @car.image.url(), lazy: true  %>
+          </div>
+
+      <div class="contentcar">
+        <center>
+          <h4><strong><%= @car.name %></strong></h4>
+          <h5><%= @car.prices %> $</h5>
+        </center>
+        <div id="contenttoshow">
+          <h3 class="progress-label">
+          Max speed:
+          <span class="pull-right"><%= (@car.max_speed) %></span>
+        </h3>
+        <div class="progress progress-cus progress-sm">
+          <div class="progress-bar progress-bar-primary"
+          role="progressbar" aria-valuenow="<%= (@car.max_speed)/2 %>" 
+          aria-valuemin="0" aria-valuemax="100" 
+          style="width: <%= ((@car.max_speed)/2) %>%">
+          </div>
+        </div>
+
+        <h3 class="progress-label">
+          Fuel consumption:
+          <span class="pull-right"><%= @car.fuel_consumption %></span>
+        </h3>
+        <div class="progress progress-cus progress-sm">
+          <div class="progress-bar progress-bar-primary"
+          role="progressbar" aria-valuenow="<%= (@car.fuel_consumption) %>" 
+          aria-valuemin="0" aria-valuemax="100" 
+          style="width: <%= (@car.fuel_consumption) %>%">
+          </div>
+        </div>
+
+
+        <h3 class="progress-label">
+          Engine capacity:
+          <span class="pull-right"><%= @car.engine_capacity %></span>
+        </h3>
+        <div class="progress progress-cus progress-sm">
+          <div class="progress-bar progress-bar-primary"
+          role="progressbar" aria-valuenow="<%= @car.engine_capacity %>" 
+          aria-valuemin="0" aria-valuemax="100" 
+          style="width: <%= @car.engine_capacity %>%">
+          </div>
+        </div>
+
+
+        <h3 class="progress-label">
+          Acceleration:
+          <span class="pull-right"><%= @car.acceleration %></span>
+        </h3>
+        <div class="progress progress-cus progress-sm">
+          <div class="progress-bar progress-bar-primary"
+          role="progressbar" aria-valuenow="<%= @car.acceleration %>" 
+          aria-valuemin="0" aria-valuemax="100" 
+          style="width: <%= @car.acceleration %>%">
+          </div>
+        </div>
+        </div>
+        
+
+      </div>
+      <ul class="menucar">
+        <li id="infos" ><a href="">Infos</a></li>
+        <li id="details" ><a href="">Details</a></li>
+
+        <li class="" role="button" data-toggle="collapse" href="#tryingCar" aria-expanded="false" aria-controls="tryingCar"> <a href="<%= new_trycar_path %>" title="">Trying</a>
+        </li>
+        <div class="collapse" id="tryingCar">
+          <div class="well">
+            <div class="form-trycar">
+              <h1>New Trycar</h1>
+              <%= render :file => 'trycars/new' %>
+            </div>
+          </div>
+        </div>
+
+      </ul>
+<!--       <img id="iconstop" src="/system/localimage/logo/stop.png" >-->
+  </div>
+  </div>
+
+  </div>
+  <div class="footer">
+    <div class="logocompanyindex">
+      <a>Thanh Cong Group</a>
+    </div>
+    <div class="backtotop">
+      <a href="#top" title=""><img src="/system/localimage/logo/backtotop.png"" alt=""></a>
+    </div>
+  </div>

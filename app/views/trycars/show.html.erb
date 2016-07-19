@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trycar.name %>
+</p>
+
+<p>
+  <strong>Old:</strong>
+  <%= @trycar.old %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @trycar.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @trycar.phone %>
+</p>
+
+<p>
+  <strong>Driver license:</strong>
+  <%= @trycar.driver_license %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @trycar.car_id %>
+</p>
+
+<p>
+  <strong>Fee trial:</strong>
+  <%= @trycar.fee_trial %>
+</p>
+
+<%= link_to 'Edit', edit_trycar_path(@trycar) %> |
+<%= link_to 'Back', trycars_path %>
