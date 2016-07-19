@@ -25,7 +25,6 @@ Rails.application.routes.draw do
 
 
   root 'static_pages#landing'
-  mount Ckeditor::Engine => '/ckeditor'
   get 'cars/toyota' => 'cars#toyota'
   get 'homepage' => 'static_pages#home'
   get 'faq' => 'static_pages#faq'
